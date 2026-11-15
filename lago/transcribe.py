@@ -1,5 +1,6 @@
 """Whisper (faster-whisper) transcription with word timestamps. Saves JSON next to the work files."""
 import json, os, subprocess, sys
+os.environ.setdefault("HF_HUB_DISABLE_XET", "1")  # xet downloader bypasses the sandbox proxy allowlist
 
 
 def extract_audio(video, wav):
@@ -9,7 +10,7 @@ def extract_audio(video, wav):
 
 def transcribe(video, out_json, model="small", language="es", device="cpu", compute="int8"):
     from faster_whisper import WhisperModel
-    wav = os.path.splitext(out_json)[0] + ".wav"
+    wav = os.path.splitext(out_json)[0] + ".16k.wav"
     extract_audio(video, wav)
     m = WhisperModel(model, device=device, compute_type=compute, download_root=os.environ.get("WHISPER_CACHE", os.path.expanduser("~/.cache/lago-whisper")))
     # vad_filter=False on purpose: we want silences/false starts reported, not hidden. no prior-text conditioning avoids hallucinated loops.
