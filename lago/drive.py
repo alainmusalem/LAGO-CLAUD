@@ -9,14 +9,18 @@ Auth, first match wins (see config/README for how to provide each):
 import json, os, time
 import requests
 
-API = "https://www.googleapis.com/drive/v3"
-UPLOAD = "https://www.googleapis.com/upload/drive/v3/files"
+# Broker mode (recommended): the agent holds only GDRIVE_BROKER_KEY; the OAuth credentials live in the Worker (see broker/).
+_BASE = os.environ.get("GDRIVE_BROKER_URL", "https://www.googleapis.com").rstrip("/")
+API = _BASE + "/drive/v3"
+UPLOAD = _BASE + "/upload/drive/v3/files"
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 FOLDER = "application/vnd.google-apps.folder"
 _cache = {"tok": None, "exp": 0}
 
 
 def _headers():
+    if os.environ.get("GDRIVE_BROKER_KEY"):
+        return {"Authorization": "Bearer " + os.environ["GDRIVE_BROKER_KEY"]}
     if os.environ.get("GDRIVE_AUTH") == "proxy":
         return {}
     if os.environ.get("GDRIVE_ACCESS_TOKEN"):
@@ -133,3 +137,13 @@ def upload(path, parent, name=None, mime="application/octet-stream", chunk=32 <<
                 raise RuntimeError(f"upload failed {r.status_code}: {r.text[:300]}")
             pos = end + 1
     raise RuntimeError("upload ended without completion")
+
+
+def rename(file_id, new_name):
+    return _req("PATCH", f"{API}/files/{file_id}", params={"supportsAllDrives": "true"}, json={"name": new_name}).json()
+
+
+def move(file_id, new_parent):
+    """Re-parent (never removes a file from Drive; the broker refuses removeParents without addParents)."""
+    old = ",".join(meta(file_id).get("parents", []))
+    return _req("PATCH", f"{API}/files/{file_id}", params={"supportsAllDrives": "true", "addParents": new_parent, "removeParents": old}, json={}).json()

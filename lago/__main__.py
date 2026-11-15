@@ -19,6 +19,12 @@ def main():
         from . import drive; print(drive.download(rest[0], rest[1]))
     elif c == "drive-push":
         from . import drive; print(json.dumps(drive.upload(rest[0], rest[1], mime="video/mp4" if rest[0].endswith(".mp4") else "application/octet-stream")))
+    elif c == "drive-rename":
+        from . import drive; print(drive.rename(rest[0], rest[1])["name"])
+    elif c == "drive-move":
+        from . import drive; print(drive.move(rest[0], rest[1]))
+    elif c == "drive-mkdir":
+        from . import drive; print(drive.mkdir(rest[0], rest[1]))
     elif c == "probe":
         from .probe import classify; print(json.dumps(classify(rest[0]), indent=2, default=str))
     elif c == "transcribe":

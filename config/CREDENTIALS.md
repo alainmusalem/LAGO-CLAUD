@@ -9,3 +9,8 @@
    - Option C: service account; share ALARION + output folder with its e-mail; GDRIVE_SA_JSON.
    Secrets must not be committed; B/C values are stored as environment variables in plain text on the environment.
 3. LUTs: drop the .cube files in a Drive folder (none were found by name search) and give its link.
+
+## Preferred: broker mode (supersedes options A-C above)
+Agent environment holds only `GDRIVE_BROKER_URL` and `GDRIVE_BROKER_KEY`. Google client id/secret/refresh token live as
+Worker secrets (see broker/README.md). Remove www.googleapis.com / oauth2.googleapis.com from the environment's allowed hosts
+and allow only the Worker host, so even a leaked token could not be used from the container.
