@@ -1,0 +1,4 @@
+faster-whisper>=1.0
+av==15.1.0  # av>=19 breaks faster-whisper 1.2.x (metadata_errors)
+google-auth>=2.30
+requests>=2.31

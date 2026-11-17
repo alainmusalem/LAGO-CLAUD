@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+node_modules/
+work/
+out/
+*.mp4
+*.mov
+*.MP4
+*.wav
+.env
+*.json.key
+service-account*.json
+
+# EP001 generated media (stored on Drive, not in git)
+animations/*/public/img/
+animations/*/public/audio/
+animations/*/assets/
+animations/*/work/
+animations/*/node_modules/
+animations/*/out/
