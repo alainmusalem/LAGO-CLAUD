@@ -1,0 +1,908 @@
+[
+ {
+  "start": 0.0,
+  "end": 2.26,
+  "words": [
+   {
+    "t": "Robert",
+    "hi": true
+   },
+   {
+    "t": "Pattinson",
+    "hi": true
+   },
+   {
+    "t": "es",
+    "hi": false
+   },
+   {
+    "t": "oficialmente",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 2.28,
+  "end": 4.07,
+  "words": [
+   {
+    "t": "el",
+    "hi": false
+   },
+   {
+    "t": "nuevo",
+    "hi": false
+   },
+   {
+    "t": "James",
+    "hi": true
+   },
+   {
+    "t": "Bond.",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 4.26,
+  "end": 5.2,
+  "words": [
+   {
+    "t": "Y",
+    "hi": false
+   },
+   {
+    "t": "su",
+    "hi": false
+   },
+   {
+    "t": "llegada",
+    "hi": false
+   },
+   {
+    "t": "podría",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 5.22,
+  "end": 6.22,
+  "words": [
+   {
+    "t": "cambiar",
+    "hi": false
+   },
+   {
+    "t": "una",
+    "hi": false
+   },
+   {
+    "t": "de",
+    "hi": false
+   },
+   {
+    "t": "las",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 6.24,
+  "end": 8.02,
+  "words": [
+   {
+    "t": "tradiciones",
+    "hi": false
+   },
+   {
+    "t": "más",
+    "hi": false
+   },
+   {
+    "t": "icónicas",
+    "hi": false
+   },
+   {
+    "t": "de",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 8.04,
+  "end": 9.38,
+  "words": [
+   {
+    "t": "la",
+    "hi": false
+   },
+   {
+    "t": "relojería.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 9.4,
+  "end": 10.77,
+  "words": [
+   {
+    "t": "Desde",
+    "hi": false
+   },
+   {
+    "t": "1995,",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 11.48,
+  "end": 12.84,
+  "words": [
+   {
+    "t": "James",
+    "hi": true
+   },
+   {
+    "t": "Bond",
+    "hi": true
+   },
+   {
+    "t": "ha",
+    "hi": false
+   },
+   {
+    "t": "utilizado",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 12.86,
+  "end": 14.07,
+  "words": [
+   {
+    "t": "relojes",
+    "hi": false
+   },
+   {
+    "t": "Omega.",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 14.32,
+  "end": 15.08,
+  "words": [
+   {
+    "t": "Pero",
+    "hi": false
+   },
+   {
+    "t": "hay",
+    "hi": false
+   },
+   {
+    "t": "un",
+    "hi": false
+   },
+   {
+    "t": "detalle",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 15.1,
+  "end": 16.94,
+  "words": [
+   {
+    "t": "que",
+    "hi": false
+   },
+   {
+    "t": "pocos",
+    "hi": false
+   },
+   {
+    "t": "están",
+    "hi": false
+   },
+   {
+    "t": "considerando:",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 17.3,
+  "end": 18.98,
+  "words": [
+   {
+    "t": "Robert",
+    "hi": true
+   },
+   {
+    "t": "Pattinson",
+    "hi": true
+   },
+   {
+    "t": "es",
+    "hi": false
+   },
+   {
+    "t": "embajador",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 19.0,
+  "end": 20.62,
+  "words": [
+   {
+    "t": "de",
+    "hi": false
+   },
+   {
+    "t": "Jaeger-LeCoultre.",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 20.64,
+  "end": 21.37,
+  "words": [
+   {
+    "t": "Entonces,",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 21.52,
+  "end": 23.0,
+  "words": [
+   {
+    "t": "¿qué",
+    "hi": false
+   },
+   {
+    "t": "reloj",
+    "hi": false
+   },
+   {
+    "t": "podría",
+    "hi": false
+   },
+   {
+    "t": "utilizar",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 23.02,
+  "end": 24.74,
+  "words": [
+   {
+    "t": "el",
+    "hi": false
+   },
+   {
+    "t": "nuevo",
+    "hi": false
+   },
+   {
+    "t": "agente",
+    "hi": false
+   },
+   {
+    "t": "007?",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 24.76,
+  "end": 26.5,
+  "words": [
+   {
+    "t": "La",
+    "hi": false
+   },
+   {
+    "t": "opción",
+    "hi": false
+   },
+   {
+    "t": "más",
+    "hi": false
+   },
+   {
+    "t": "lógica",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 26.52,
+  "end": 27.98,
+  "words": [
+   {
+    "t": "sería",
+    "hi": false
+   },
+   {
+    "t": "el",
+    "hi": false
+   },
+   {
+    "t": "Omega",
+    "hi": true
+   },
+   {
+    "t": "Seamaster",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 28.0,
+  "end": 30.0,
+  "words": [
+   {
+    "t": "Diver",
+    "hi": false
+   },
+   {
+    "t": "300M.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 30.02,
+  "end": 30.78,
+  "words": [
+   {
+    "t": "Un",
+    "hi": false
+   },
+   {
+    "t": "reloj",
+    "hi": false
+   },
+   {
+    "t": "que",
+    "hi": false
+   },
+   {
+    "t": "lleva",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 30.8,
+  "end": 32.02,
+  "words": [
+   {
+    "t": "más",
+    "hi": false
+   },
+   {
+    "t": "de",
+    "hi": false
+   },
+   {
+    "t": "tres",
+    "hi": false
+   },
+   {
+    "t": "décadas",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 32.04,
+  "end": 33.12,
+  "words": [
+   {
+    "t": "formando",
+    "hi": false
+   },
+   {
+    "t": "parte",
+    "hi": false
+   },
+   {
+    "t": "de",
+    "hi": false
+   },
+   {
+    "t": "la",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 33.14,
+  "end": 34.5,
+  "words": [
+   {
+    "t": "identidad",
+    "hi": false
+   },
+   {
+    "t": "del",
+    "hi": false
+   },
+   {
+    "t": "personaje.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 34.76,
+  "end": 36.46,
+  "words": [
+   {
+    "t": "Pero",
+    "hi": false
+   },
+   {
+    "t": "si",
+    "hi": false
+   },
+   {
+    "t": "Jaeger-LeCoultre",
+    "hi": true
+   },
+   {
+    "t": "entrara",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 36.48,
+  "end": 37.24,
+  "words": [
+   {
+    "t": "en",
+    "hi": false
+   },
+   {
+    "t": "escena,",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 37.5,
+  "end": 38.58,
+  "words": [
+   {
+    "t": "el",
+    "hi": false
+   },
+   {
+    "t": "Polaris",
+    "hi": true
+   },
+   {
+    "t": "sería",
+    "hi": false
+   },
+   {
+    "t": "un",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 38.6,
+  "end": 39.76,
+  "words": [
+   {
+    "t": "candidato",
+    "hi": false
+   },
+   {
+    "t": "interesante.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 40.1,
+  "end": 40.96,
+  "words": [
+   {
+    "t": "Deportivo,",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 41.18,
+  "end": 42.7,
+  "words": [
+   {
+    "t": "elegante",
+    "hi": false
+   },
+   {
+    "t": "y",
+    "hi": false
+   },
+   {
+    "t": "discreto.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 43.02,
+  "end": 44.12,
+  "words": [
+   {
+    "t": "Aunque",
+    "hi": false
+   },
+   {
+    "t": "también",
+    "hi": false
+   },
+   {
+    "t": "existe",
+    "hi": false
+   },
+   {
+    "t": "una",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 44.14,
+  "end": 46.32,
+  "words": [
+   {
+    "t": "alternativa",
+    "hi": false
+   },
+   {
+    "t": "mucho",
+    "hi": false
+   },
+   {
+    "t": "más",
+    "hi": false
+   },
+   {
+    "t": "sofisticada:",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 46.62,
+  "end": 47.46,
+  "words": [
+   {
+    "t": "el",
+    "hi": false
+   },
+   {
+    "t": "Reverso,",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 47.68,
+  "end": 48.42,
+  "words": [
+   {
+    "t": "un",
+    "hi": false
+   },
+   {
+    "t": "reloj",
+    "hi": false
+   },
+   {
+    "t": "que",
+    "hi": false
+   },
+   {
+    "t": "el",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 48.44,
+  "end": 50.2,
+  "words": [
+   {
+    "t": "propio",
+    "hi": false
+   },
+   {
+    "t": "Pattinson",
+    "hi": false
+   },
+   {
+    "t": "ha",
+    "hi": false
+   },
+   {
+    "t": "relacionado",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 50.22,
+  "end": 51.68,
+  "words": [
+   {
+    "t": "con",
+    "hi": false
+   },
+   {
+    "t": "su",
+    "hi": false
+   },
+   {
+    "t": "interpretación",
+    "hi": false
+   },
+   {
+    "t": "de",
+    "hi": false
+   },
+   {
+    "t": "Batman.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 51.7,
+  "end": 52.88,
+  "words": [
+   {
+    "t": "Y",
+    "hi": false
+   },
+   {
+    "t": "no",
+    "hi": false
+   },
+   {
+    "t": "sería",
+    "hi": false
+   },
+   {
+    "t": "la",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 52.9,
+  "end": 54.02,
+  "words": [
+   {
+    "t": "primera",
+    "hi": false
+   },
+   {
+    "t": "vez",
+    "hi": false
+   },
+   {
+    "t": "que",
+    "hi": false
+   },
+   {
+    "t": "James",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 54.06,
+  "end": 55.37,
+  "words": [
+   {
+    "t": "Bond",
+    "hi": false
+   },
+   {
+    "t": "cambia",
+    "hi": false
+   },
+   {
+    "t": "de",
+    "hi": false
+   },
+   {
+    "t": "marca.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 55.54,
+  "end": 57.08,
+  "words": [
+   {
+    "t": "En",
+    "hi": false
+   },
+   {
+    "t": "1962,",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 57.4,
+  "end": 58.66,
+  "words": [
+   {
+    "t": "Sean",
+    "hi": true
+   },
+   {
+    "t": "Connery",
+    "hi": true
+   },
+   {
+    "t": "llevaba",
+    "hi": false
+   },
+   {
+    "t": "un",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 58.68,
+  "end": 59.98,
+  "words": [
+   {
+    "t": "Rolex",
+    "hi": true
+   },
+   {
+    "t": "Submariner.",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 60.32,
+  "end": 60.9,
+  "words": [
+   {
+    "t": "Por",
+    "hi": false
+   },
+   {
+    "t": "ahora,",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 61.02,
+  "end": 62.4,
+  "words": [
+   {
+    "t": "nada",
+    "hi": false
+   },
+   {
+    "t": "está",
+    "hi": false
+   },
+   {
+    "t": "confirmado",
+    "hi": false
+   },
+   {
+    "t": "sobre",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 62.42,
+  "end": 63.78,
+  "words": [
+   {
+    "t": "su",
+    "hi": false
+   },
+   {
+    "t": "próximo",
+    "hi": false
+   },
+   {
+    "t": "reloj.",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 63.82,
+  "end": 64.66,
+  "words": [
+   {
+    "t": "Pero",
+    "hi": false
+   },
+   {
+    "t": "si",
+    "hi": false
+   },
+   {
+    "t": "tú",
+    "hi": false
+   },
+   {
+    "t": "fueras",
+    "hi": false
+   }
+  ]
+ },
+ {
+  "start": 64.68,
+  "end": 65.4,
+  "words": [
+   {
+    "t": "James",
+    "hi": true
+   },
+   {
+    "t": "Bond,",
+    "hi": true
+   }
+  ]
+ },
+ {
+  "start": 65.74,
+  "end": 68.51,
+  "words": [
+   {
+    "t": "¿elegirías",
+    "hi": false
+   },
+   {
+    "t": "Omega",
+    "hi": true
+   },
+   {
+    "t": "o",
+    "hi": false
+   },
+   {
+    "t": "Jaeger-LeCoultre?",
+    "hi": true
+   }
+  ]
+ }
+]

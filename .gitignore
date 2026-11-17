@@ -10,3 +10,11 @@ out/
 .env
 *.json.key
 service-account*.json
+
+# EP001 generated media (stored on Drive, not in git)
+animations/*/public/img/
+animations/*/public/audio/
+animations/*/assets/
+animations/*/work/
+animations/*/node_modules/
+animations/*/out/
