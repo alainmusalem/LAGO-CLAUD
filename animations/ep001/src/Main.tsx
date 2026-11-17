@@ -75,6 +75,20 @@ const Shot: React.FC<{d: ShotDef}> = ({d}) => {
   );
 };
 
+// ---------- Seamaster descends through the water into the next shot's pose ----------
+const Descent: React.FC<{dur: number}> = ({dur}) => {
+  const frame = useCurrentFrame();
+  const p = ease(Math.min(1, frame / dur));
+  const a = interpolate(frame, [0, 18, dur - 6, dur], [0, 1, 1, 1], {extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{mixBlendMode: 'screen', opacity: a * 0.95, pointerEvents: 'none'}}>
+      <Img src={staticFile('img/seamaster.png')} style={{width: W, height: H, objectFit: 'cover', transformOrigin: '50% 50%', filter: 'contrast(1.12)',
+        WebkitMaskImage: 'radial-gradient(ellipse 46% 40% at 50% 50%, #000 62%, rgba(0,0,0,0) 100%)', maskImage: 'radial-gradient(ellipse 46% 40% at 50% 50%, #000 62%, rgba(0,0,0,0) 100%)',
+        transform: `translateY(${-760 + p * 870}px) scale(0.8) rotate(${-9 + p * 7}deg)`}} />
+    </AbsoluteFill>
+  );
+};
+
 // ---------- typography ----------
 const Kicker: React.FC<{from: number; to: number; brand: string; model?: string; y?: number}> = ({from, to, brand, model, y = 1120}) => {
   const frame = useCurrentFrame();
@@ -125,6 +139,7 @@ const Subtitles: React.FC = () => {
   const a = Math.max(0, Math.min(inP, outP, 1));
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
+      <div style={{position: 'absolute', left: 0, right: 0, bottom: 380, height: 300, opacity: a, background: 'linear-gradient(180deg, rgba(2,5,14,0) 0%, rgba(2,5,14,0.62) 55%, rgba(2,5,14,0) 100%)'}} />
       <div style={{position: 'absolute', bottom: 480, left: 64, right: 64, textAlign: 'center', opacity: a, transform: `translateY(${(1 - inP) * 10}px)`,
         fontFamily: SANS, fontWeight: 600, fontSize: 56, lineHeight: 1.2, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#F4F1EA',
         textShadow: '0 2px 4px rgba(0,0,0,0.9), 0 0 26px rgba(0,0,0,0.85)'}}>
@@ -225,6 +240,7 @@ export const Main: React.FC = () => {
           <Dust n={22} seed="flip" /><Vignette /><FlipCard />
         </AbsoluteFill>
       </Sequence>
+      <Sequence from={f(24.9)} durationInFrames={f(2.4)}><Descent dur={f(2.2)} /></Sequence>
       <Sequence from={f(FINALE.from)} durationInFrames={f(FINALE.to - FINALE.from)}><Finale /></Sequence>
 
       {/* typography beats, aligned to the narration */}
