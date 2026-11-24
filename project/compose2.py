@@ -6,12 +6,12 @@ import compose as C
 import captions2
 from compose import W,H,FB,FX,YEL,SCALE,CX0,CY0,TARGET,CROP,ss,blend,load_alpha,centroid,build_plate,Reader,text_layer
 RED=(0xFF,0x38,0x38); GREEN=(0x32,0xD7,0x4B)
-LABEL_SIZE=106; LABEL_Y=470
+LABEL_SIZE=92; LABEL_Y=395   # V4: rótulos en dos líneas (COMPRAR CASA / RENTAR CASA)
 SUB_SIZE=56; SUB_TOP=1170; CARD_Y=690   # V3: tarjeta centrada, justo debajo de los rótulos
 SHOW_TITLE=False                          # V3: sin título inicial
 IMG_W,IMG_H,IMG_Y=420,280,688
-def text_block(lines,size=SUB_SIZE,fill=YEL,shadow_a=0.6,off=(0,4),blur=3,pad=22,lh=1.10):
-    f=ImageFont.truetype(FB,size); asc,desc=f.getmetrics()
+def text_block(lines,size=SUB_SIZE,fill=YEL,shadow_a=0.6,off=(0,4),blur=3,pad=22,lh=1.10,font=FB):
+    f=ImageFont.truetype(font,size); asc,desc=f.getmetrics()
     ws=[f.getlength(l) for l in lines]; w=int(max(ws))+2*pad; step=int(size*lh); h=step*(len(lines)-1)+asc+desc+2*pad
     sh=Image.new("RGBA",(w,h),(0,0,0,0)); fg=Image.new("RGBA",(w,h),(0,0,0,0))
     ds=ImageDraw.Draw(sh); df=ImageDraw.Draw(fg)
@@ -32,8 +32,9 @@ def rounded_image(path,w=IMG_W,h=IMG_H,r=22):
     canvas=Image.alpha_composite(canvas,shadow); tile=im.convert("RGBA"); tile.putalpha(mask); canvas.alpha_composite(tile,(pad,pad))
     return np.array(canvas)
 def layout_labels():
-    return {'P':text_layer("POBRE",FX,LABEL_SIZE,RED,shadow_a=0.55,off=(0,4),blur=4),
-            'R':text_layer("RICO",FX,LABEL_SIZE,GREEN,shadow_a=0.55,off=(0,4),blur=4)}
+    kw=dict(size=LABEL_SIZE,shadow_a=0.55,off=(0,4),blur=4,pad=24,lh=1.02,font=FX)
+    return {'P':text_block(["COMPRAR","CASA"],fill=RED,**kw),
+            'R':text_block(["RENTAR","CASA"],fill=GREEN,**kw)}
 def scale_rgba(a,s):
     return cv2.resize(a,None,fx=s,fy=s,interpolation=cv2.INTER_AREA if s<1 else cv2.INTER_CUBIC)
 def eob(t): c1=1.70158; c3=c1+1; return 1+c3*(t-1)**3+c1*(t-1)**2
