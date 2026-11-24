@@ -33,6 +33,9 @@ def rounded_image(path,w=IMG_W,h=IMG_H,r=22):
     canvas=Image.alpha_composite(canvas,shadow); tile=im.convert("RGBA"); tile.putalpha(mask); canvas.alpha_composite(tile,(pad,pad))
     return np.array(canvas)
 def layout_labels():
+    if os.environ.get("LABELS")=="simple":      # V6: solo las palabras RICO (izq.) y POBRE (der.), una línea
+        kw=dict(size=106,shadow_a=0.55,off=(0,4),blur=4,pad=24,lh=1.02,font=FX)
+        return {'P':text_block(["POBRE"],fill=RED,**kw),'R':text_block(["RICO"],fill=GREEN,**kw)}
     kw=dict(size=LABEL_SIZE,shadow_a=0.55,off=(0,4),blur=4,pad=24,lh=1.02,font=FX)
     return {'P':text_block(["COMPRAR","CASA"],fill=RED,**kw),
             'R':text_block(["RENTAR","CASA"],fill=GREEN,**kw)}
@@ -88,7 +91,7 @@ def main(outA,outB,plan,start=0,test_frames=None):
         fr=np.clip(cv2.resize(crop,(W,H),interpolation=cv2.INTER_LANCZOS4),0,255)*shade
         fr+=rng.normal(0,1.6,fr.shape[:2])[:,:,None].astype(np.float32); fr=np.clip(fr,0,255)
         cxs={'P':int((TARGET['P']-CX0)*SCALE),'R':int((TARGET['R']-CX0)*SCALE)}
-        for w_ in 'PR': blend(fr,labs[w_],cxs[w_],LABEL_Y)
+        for w_ in 'PR': blend(fr,labs[w_],cxs[w_],440 if os.environ.get('LABELS')=='simple' else LABEL_Y)
         for which,lines,t0,t1 in caps:
             if t0<=out_t<t1:
                 key=tuple(lines)
