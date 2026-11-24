@@ -5,6 +5,7 @@ from edl import *
 import compose as C
 import captions2
 from compose import W,H,FB,FX,YEL,SCALE,CX0,CY0,TARGET,CROP,ss,blend,load_alpha,centroid,build_plate,Reader,text_layer
+TARGET={'P':765,'R':315}   # V5: personajes intercambiados (POBRE a la derecha, RICO a la izquierda); rótulos, subtítulos e imágenes siguen a cada personaje
 RED=(0xFF,0x38,0x38); GREEN=(0x32,0xD7,0x4B)
 LABEL_SIZE=92; LABEL_Y=395   # V4: rótulos en dos líneas (COMPRAR CASA / RENTAR CASA)
 SUB_SIZE=56; SUB_TOP=1170; CARD_Y=690   # V3: tarjeta centrada, justo debajo de los rótulos
