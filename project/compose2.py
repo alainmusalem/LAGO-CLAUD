@@ -7,7 +7,8 @@ import captions2
 from compose import W,H,FB,FX,YEL,SCALE,CX0,CY0,TARGET,CROP,ss,blend,load_alpha,centroid,build_plate,Reader,text_layer
 RED=(0xFF,0x38,0x38); GREEN=(0x32,0xD7,0x4B)
 LABEL_SIZE=106; LABEL_Y=470
-SUB_SIZE=56; SUB_TOP=1170; CARD_Y=320
+SUB_SIZE=56; SUB_TOP=1170; CARD_Y=690   # V3: tarjeta centrada, justo debajo de los rótulos
+SHOW_TITLE=False                          # V3: sin título inicial
 IMG_W,IMG_H,IMG_Y=420,280,688
 def text_block(lines,size=SUB_SIZE,fill=YEL,shadow_a=0.6,off=(0,4),blur=3,pad=22,lh=1.10):
     f=ImageFont.truetype(FB,size); asc,desc=f.getmetrics()
@@ -91,7 +92,7 @@ def main(outA,outB,plan,start=0,test_frames=None):
                 key=tuple(lines)
                 if key not in cap_cache: cap_cache[key]=text_block(list(lines))
                 lay=cap_cache[key]; blend(fr,lay,cxs[which],SUB_TOP+lay.shape[0]//2-22)
-        if out_t<1.5:
+        if SHOW_TITLE and out_t<1.5:
             sc=0.92+0.08*ss(0,0.2,out_t) if out_t<0.2 else 1.0; op=1-ss(1.35,1.5,out_t) if out_t>1.35 else 1.0
             for nm,cy in (('t_pobre',940),('t_vs',1085),('t_rico',1235)):
                 lay=Ltitle[nm]; lay=scale_rgba(lay,sc) if sc!=1.0 else lay; blend(fr,lay,540,cy,op)
