@@ -79,7 +79,7 @@ def card_img(i,cache={}):
     im=cv2.imread(f"../work/card_clean/c_{i+1:03d}.png",cv2.IMREAD_UNCHANGED)
     crop=im[70:200,95:450]                      # recorte de la tarjeta
     crop=cv2.resize(crop,None,fx=1.75,fy=1.75,interpolation=cv2.INTER_CUBIC)
-    rgba=np.dstack([crop[:,:,:3],crop[:,:,3]]); cache[i]=rgba; return rgba
+    rgba=np.dstack([crop[:,:,2],crop[:,:,1],crop[:,:,0],crop[:,:,3]]); cache[i]=rgba; return rgba  # BGRA -> RGBA
 def main(out_path,start=0,count=None,test_frames=None):
     mp,tot=edit_time_map(); OUT_DUR=tot/SPEED; N=int(round(OUT_DUR*FPS))
     plate,ratio=build_plate()
@@ -141,6 +141,8 @@ def main(out_path,start=0,count=None,test_frames=None):
                 key=(txt,)
                 if key not in cap_cache: cap_cache[key]=text_layer(txt,FB,70,YEL,shadow_a=0.6,off=(0,4),blur=3)
                 cxp=int((TARGET[which]-CX0)*SCALE); lay=cap_cache[key]
+                if lay.shape[1]>520:
+                    sc=520/lay.shape[1]; lay=cv2.resize(lay,None,fx=sc,fy=sc,interpolation=cv2.INTER_AREA); cap_cache[key]=lay
                 blend(fr,lay,cxp,SUB_Y+lay.shape[0]//2-20)
         # título inicial (0-1.5 s)
         if out_t<1.5:

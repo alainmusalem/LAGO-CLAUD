@@ -27,7 +27,7 @@ def chunk(ws,maxw=470,size=70,maxn=3):
     for j in range(1,n+1):
         for i in range(max(0,j-maxn),j):
             seg=ws[i:j]; txt=" ".join(x[0] for x in seg)
-            if f.getlength(txt)>maxw: continue
+            if f.getlength(txt)>maxw and j-i>1: continue
             k=j-i; dur=seg[-1][2]-seg[0][1]
             c={1:2.5,2:0.0,3:0.3}[k]+(3.0 if dur<0.45 else 0)+0.1
             if k==1 and len(txt)<=3: c+=3
