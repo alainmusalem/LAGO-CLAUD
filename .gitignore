@@ -1,0 +1,6 @@
+# material pesado (queda en disco, no se versiona)
+material_original/
+assets_prev/
+work/
+*.wav
+*.mov
